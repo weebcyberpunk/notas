@@ -42,7 +42,10 @@ Isso é outra linha
 
 	Aliás, se precisar de parágrafos dentro de elementos de listas, indente-os
 
-- E agora a lista pode seguir
+- E agora a lista pode seguir  
+- A tag de HTML abaixo está aí para forçar a lista a terminar, caso contrário o código abaixo seria tratado como parágrafo da lista e não código
+
+<a/>
 
 	#include<stdio.h>
 
@@ -63,13 +66,13 @@ E isso vai ser uma linha horizontal:
 
 ---
 
-[Isso é um link](https://pudim.com)
+[Isso é um link](http://pudim.com.br)
 
-[E isso é um link com título](https://pudim.com "O site mais delicioso da internet")
+[E isso é um link com título](http://pudim.com.br "O site mais delicioso da internet")
 
 E isso é um link "tal qual ele é":
 
-<https://pudim.com>
+<http://pudim.com.br>
 
 Ou um email:
 
