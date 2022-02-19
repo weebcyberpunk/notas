@@ -39,7 +39,6 @@ Isso é outra linha
 - Uma
 - Lista
 - Não-ordenada
-- 1984 \Preste atenção que, caso comece a lista com um número, precisa escapar a frase em seguida
 
 	Aliás, se precisar de parágrafos dentro de elementos de listas, indente-os
 
