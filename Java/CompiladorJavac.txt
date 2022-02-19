@@ -1,0 +1,16 @@
+O compilador Javac é utilizado por linha de comando através do comando javac
+
+Para compilar um programa com um só pacote, recomendo fazer assim:
+
+  $ javac *.java
+
+Perceba que estamos dizendo para ele compilar tudo o que for .java
+
+Para especificar um diretório de destino, use a bandeira -d após as classes
+
+Para compilar um programa com mais de um pacote, começa a ficar interessante usar arquivos de listagem
+Crie um arquivo de listagem, por exemplo, javafiles.txt, e indique-o ao compilador dessa forma:
+
+  $ javac @javafiles.txt
+  
+Lembre-se que o arquivo de listagem deve conter as classes separadas por espaços ou quebra de linha

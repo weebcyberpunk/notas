@@ -1,0 +1,22 @@
+Um .jar é como um arquivo compactado, para se usar especificamente com Java
+
+Para criar um jar rapidamente, use:
+
+  $ jar cf nome-do-jar.jar arquivo.java arquivo.java arquivo.java...
+  
+c define que queremos criar um novo .jar e f define que queremos a saída em arquivo e não no standart output
+Perceba que, dessa forma, o jar já criará um manifesto para o seu .jar
+
+Outros parâmetros que podem ser usados:
+  - v - para dar retorno sobre a execução no terminal
+  - 0 - para não comprimir o .jar
+  - m - para incluir um manifesto em texto
+  - e - para definir a classe principal que será colocada no manifesto padrão
+  
+Lembre-se de que, deve-se colocar os inputs na mesma ordem dos parâmetros e os arquivos depois. Isso é, se você escreveu:
+
+  $ jar cfe 
+  
+Deve-se colocar a seguinte ordem de inputs:
+
+  $ jar cfe nome-do-jar.jar ClassePrincipal arquivo.java arquivo.java...
