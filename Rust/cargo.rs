@@ -24,5 +24,26 @@ fn cargo() {
     // mais (pasmem) otimizado.
     //
     // Build comuns são colocadas em target/debug e releases em target/release.
+    
+    // É em gerenciar dependências que o cargo se destaca. Para adicionar dependências ao projeto,
+    // coloque-as na seção 'dependencies' do Cargo.toml:
+    //
+    // [dependencies]
+    // rand = "0.8.3"
+    //
+    // Perceba que o versionamento é importante. Por padrão, o Cargo vai considerar algo como
+    // '0.8.3' como 'qualquer versão maior ou igual à 0.8.3 e menor que a 0.9.0'. Libs devem
+    // atualizar o segundo número da versão quando mudarem a API, portanto uma mudança da 0.8.3
+    // para a, ex, 0.8.4 não alterará significativamente o projeto, enquanto da 0.8 pra 0.9 pode
+    // ter mudanças na API, ou seja, o código que você escreve deve ser mudado.
+    //
+    // Veja porém que o Cargo armazena a versão da lib utilizada na primeira build no Cargo.lock,
+    // de maneira que, mesmo que essa lib atualize, por exemplo, da versão 0.8.3 para a 0.8.4, para
+    // garantir que não haverão problemas, o Cargo mantém a lib na versão 0.8.3, exceto que você
+    // mesmo atualize. Para atualizar para a última versão das libs, é só utilizar 'cargo update'.
+    //
+    // Perceba que, por causa da possível mudança da API, o update ignora versões cujo segundo
+    // número subiu. Para atualizar, ex, da versão 0.8 para a 0.9, é necessário mudar a dependência
+    // no Cargo.toml.
 
 }

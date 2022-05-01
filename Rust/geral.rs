@@ -23,4 +23,13 @@ fn main() {
     // Entre os tipos implementados na std, há a String:
     let mut String::new();
     // Perceba que o :: indica que new é uma função associada do tipo String.
+    
+    // Rust é orientada a objeto. Para receber input, por exemplo:
+
+    io::stdin()                 // é possível chamar o método na mesma
+        .read_line(&mut input)  // linha que o objeto também
+
+    // O que acontece é que stdin() cria uma instância da classe Stdin, que é uma handler do stdin.
+    // Depois, chama o método read_line(), que lê uma linha do stdin e salva na string input
+    // (passada como reference, os pointers de Rust, mutável)
 }
