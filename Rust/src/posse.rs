@@ -82,3 +82,11 @@ fn scope_again() {
     /*
      * Perceba que o retorno das funções transfere a posse das váriaveis para a função chamante,
      * evitando assim simplesmente se perder um valor passado.
+     *
+     * Aliás, sempre é possível criar um novo escôpo com chaves:
+     */
+    let x = 2;
+    {
+        let y = 5;
+    } // x e y estão em escôpos diferentes
+}
