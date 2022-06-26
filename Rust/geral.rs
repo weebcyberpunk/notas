@@ -32,4 +32,24 @@ fn main() {
     // O que acontece é que stdin() cria uma instância da classe Stdin, que é uma handler do stdin.
     // Depois, chama o método read_line(), que lê uma linha do stdin e salva na string input
     // (passada como reference, os pointers de Rust, mutável)
+
+    //
+    // Output é todo feito através de macros declarados em std::fmt:
+    //
+    format!("Escreve texto formatado para uma string");
+    print!("Escreve text formatado no stdout");
+    println!("Escreve texto formatado no stdout e pula uma linha");
+    eprint!("Escreve texto formatado para o stderr");
+    eprintln!("Escreve texto formatado para o stderr e pula uma linha");
+
+    // Para formatar:
+    println!("PI é aproximadamente {}.", 3.14);
+    // É possível definir os argumentos pelo índice:
+    println!("Meu nome é {0}, {1}, {0}.", "Bond", "James");
+    // Ou por nomes:
+    println!("Meu nome é {sobrenome}, {nome}, {sobrenome}.", 
+             sobrenome="Bond", 
+             nome="James"
+             );
+    // mais uma montanha de maneiras... veja a documentação
 }
